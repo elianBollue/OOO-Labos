@@ -38,10 +38,14 @@ public abstract class Vechter extends Actor {
 		}	
 		tegenstander.verwerkAanval(this);
 	}
-	
-	protected void verwerkAanval(Vechter tegenstander){
+	public void verwerkAanval(Vechter tegenstander){
 		if (this.getKracht() != tegenstander.getKracht())
 			this.setEnergieNiveau(this.getEnergieNiveau() - tegenstander.getKracht());
+	}
+
+
+	public boolean isDood() {
+		return this.getEnergieNiveau()==0;
 	}
 	
 	@Override

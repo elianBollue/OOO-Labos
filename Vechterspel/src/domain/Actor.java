@@ -3,7 +3,7 @@ package domain;
 public abstract class Actor {
 private String naam;
 private int energieNiveau;
-
+private Spel spel;
 
 private static final int INIT_ENERGIE_NIVEAU = 1000;
 
@@ -36,22 +36,20 @@ protected void setEnergieNiveau(int energieNiveau){
 	this.energieNiveau = energieNiveau;
 }
 
-
-
-protected void setSpel(Spel spel) throws DomainException{
-	this.spel = spel;
-}
-
 public static int getInitEnergieNiveau() {
 	return INIT_ENERGIE_NIVEAU;
 }
 
-protected abstract void verwerkAanval(Vechter aanvaller);
+	public Spel getSpel(){
+		return spel;
+	}
 
+	protected void setSpel(Spel spel) throws DomainException{
+		this.spel = spel;
+	}
 
-public boolean isDood(){
-	return this.getEnergieNiveau() == 0;
-}	
+public abstract void verwerkAanval(Vechter aanvaller);
+public abstract boolean isDood();
 
 @Override
 public boolean equals(Object object){

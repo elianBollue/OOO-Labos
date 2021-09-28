@@ -11,7 +11,7 @@ public class Vampier extends Vechter implements Reincarneerbaar{
 	}
 	
 	@Override
-	protected void verwerkAanval(Vechter tegenstander){
+	public void verwerkAanval(Vechter tegenstander){
 		if (this.getKracht() > tegenstander.getKracht()) 
 			 this.setEnergieNiveau(this.getEnergieNiveau() + tegenstander.getKracht());
 		else super.verwerkAanval(tegenstander);
@@ -33,7 +33,7 @@ public class Vampier extends Vechter implements Reincarneerbaar{
 	
 	@Override
 	public void reincarneer() {
-		setEnergieNiveau(getSpel().getLaagsteEnergieNiveau());		
+		setEnergieNiveau(this.getSpel().getLaagsteEnergieNiveau());
 	}
 	
 }

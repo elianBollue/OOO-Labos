@@ -9,6 +9,11 @@ public class Rover extends Vechter{
 	public Rover(String naam, int kracht, int energieNiveau) throws DomainException{
 		super(naam,kracht,energieNiveau);
 	}
+
+	public void verwerkAanval(Vechter tegenstander){
+		if (this.getKracht() != tegenstander.getKracht())
+			this.setEnergieNiveau(this.getEnergieNiveau() - tegenstander.getKracht());
+	}
 	
 	@Override
 	public String toString(){
