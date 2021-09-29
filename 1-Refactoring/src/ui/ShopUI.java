@@ -1,5 +1,6 @@
 package ui;
 
+import db.LoadMethod;
 import domain.Game;
 import domain.Movie;
 import domain.Shop;
@@ -11,8 +12,8 @@ import static domain.Shop.*;
 public class ShopUI {
     private Shop shop;
 
-    public ShopUI() {
-        this.shop = new Shop();
+    public ShopUI(LoadMethod loadmethod) {
+        this.shop = new Shop(loadmethod);
     }
 
 

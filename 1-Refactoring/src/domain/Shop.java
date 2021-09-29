@@ -1,14 +1,17 @@
 package domain;
 
+import db.LoadMethod;
+import db.ShopDB;
+
 import javax.swing.*;
 import java.util.ArrayList;
 
 public class Shop {
-    private ArrayList<Product> products;
+    private ShopDB products;
 
-    public Shop()
+    public Shop(LoadMethod loadmethod)
     {
-        this.products = new ArrayList<Product>();
+        this.products = new ShopDB(loadmethod);
     }
 
 
