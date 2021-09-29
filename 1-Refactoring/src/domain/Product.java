@@ -2,13 +2,13 @@ package domain;
 
 import javax.swing.*;
 
-public class Product {
+public abstract class Product {
     private String title,id,type;
 
-    public Product() {
-        this.title= JOptionPane.showInputDialog("Enter the title:");
-        this.id = JOptionPane.showInputDialog("Enter the id:");
-        this.type = JOptionPane.showInputDialog("Enter the type (M for movie/G for game):");
+    public Product(String title,String id, String type) {
+        this.title=title; //JOptionPane.showInputDialog("Enter the title:");
+        this.id = id; // JOptionPane.showInputDialog("Enter the id:");
+        this.type = type; //JOptionPane.showInputDialog("Enter the type (M for movie/G for game):");
     }
     public String getId() {
         return id;

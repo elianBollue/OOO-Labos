@@ -53,14 +53,7 @@ public class WachtwoordApp {
         //TO DO    Maak de lijst met geordende wachtwoorden (wachtwoordenGeordend)
 
 
-        Set wachtwoordenGeordend = new TreeSet<String>(new Comparator<String>(){
-            @Override
-            public int compare(java.lang.String o1, java.lang.String o2) {
-                int result = o2.length()-o1.length();
-                if (result == 0) result = o1.compareTo(o2);
-                return result;
-
-            }});
+        Set <String> wachtwoordenGeordend = new TreeSet<String>(new ordenVanLangNaarKort());
 
 
         for (Map.Entry<String, ArrayList<String>> lijst : userAndPasswords.entrySet()) {
