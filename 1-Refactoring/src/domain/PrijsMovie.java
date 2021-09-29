@@ -4,7 +4,7 @@ public class PrijsMovie implements PrijsBerekeningsMethode {
     public PrijsMovie(){}
 
     @Override
-    public double berekenPrijs(int days) {
+    public double getPrice(int days) {
         double price = 5;
         int daysLeft = days - 3;
         if (daysLeft > 0) {

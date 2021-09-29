@@ -1,8 +1,8 @@
 package domain;
 
 public class Game extends Product {
-    public Game(String title,String id){
-        super(title,id,"G",new PrijsGame());
+    public Game(String title){
+        super(title,"G",new PrijsGame());
     }
 
     public double getPrice(int days){

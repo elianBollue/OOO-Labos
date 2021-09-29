@@ -1,5 +1,5 @@
 package domain;
 
 public interface PrijsBerekeningsMethode {
-    public double berekenPrijs(int days);
+    public double getPrice(int days);
 }

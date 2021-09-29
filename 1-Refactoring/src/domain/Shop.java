@@ -17,42 +17,25 @@ public class Shop {
 
 
     public void addProduct(Product product) {
-        this.products.add(product);
+        this.products.addProduct(product);
     }
 
-    public static void showProduct(Shop shop){
-        String id = JOptionPane.showInputDialog("Enter the id:");
-        int idx = -1;
-        boolean found = false;
-        for(int i = 0; i < shop.products.size() && !found; i++)
-        {
-            if(shop.products.get(i).getId().equals(id))
-            {
-                idx = i;
-                found = true;
-            }
+    public String showProduct(int id){
+        if (products.getProductlijst().containsKey(id)) {
+            Product p = (Product) products.getProductlijst().get(id);
+            return p.getTitle();
         }
-        if(found)
-        {
-            JOptionPane.showMessageDialog(null, shop.products.get(idx).toString());
-        }
+        return "No such product";
     }
 
-    public static void showPrice(Shop shop){
-        String id = JOptionPane.showInputDialog("Enter the id:");
-        int idx = -1;
-        boolean found = false;
-        for(int i = 0; i < shop.products.size() && !found; i++){
-            if(shop.products.get(i).getId().equals(id)){
-                idx = i;
-                found = true;
-            }
+
+    public double showPrice(int id, int days) {
+
+        if (products.getProductlijst().containsKey(id)) {
+            Product p = (Product) products.getProductlijst().get(id);
+            return p.getPrice(days);
         }
-        if(found){
-            String daysString = JOptionPane.showInputDialog("Enter the number of days:");
-            int days = Integer.parseInt(daysString);
-            JOptionPane.showMessageDialog(null, shop.products.get(idx).getPrice(days));
-        }
+        return 0;
     }
 
 }
