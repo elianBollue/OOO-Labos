@@ -10,6 +10,11 @@ public class Movie extends Product {
     }
 
     public double getPrice(int days){
-        return days * 3;
+        double price = 5;
+        int daysLeft = days - 3;
+        if (daysLeft > 0) {
+            price += (daysLeft * 2);
+        }
+        return price;
     }
 }
