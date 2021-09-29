@@ -13,9 +13,8 @@ public class Shop {
 
 
 
-    public static void addProduct(Shop shop) {
-        Product newProduct = new Product();
-        shop.products.add(newProduct);
+    public void addProduct(Product product) {
+        this.products.add(product);
     }
 
     public static void showProduct(Shop shop){
