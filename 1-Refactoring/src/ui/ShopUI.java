@@ -7,6 +7,7 @@ import javax.swing.*;
 import static domain.Shop.*;
 
 public class ShopUI {
+    public ShopUI(){}
 
     public void start() {
         Shop shop = new Shop();
