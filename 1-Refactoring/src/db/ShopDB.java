@@ -6,11 +6,11 @@ import domain.Product;
 import java.util.*;
 
 public class ShopDB {
-    private LoadMethod loadmethod;
-    private HashMap<Integer,Product> productlijst;
     private static int AANTAL_PRODUCTEN = 0;
+    private LoadMethod loadmethod;
+    private HashMap<Integer, Product> productlijst;
 
-    public ShopDB(LoadMethod loadmethod){
+    public ShopDB(LoadMethod loadmethod) {
         this.loadmethod = loadmethod;
         this.productlijst = new HashMap<>();
     }
@@ -18,13 +18,14 @@ public class ShopDB {
     public HashMap getProductlijst() {
         return this.productlijst;
     }
+
     public void addProduct(Product product) {
-        this.productlijst.put(this.getVolgendeIndex(),product);
+        this.productlijst.put(this.getVolgendeIndex(), product);
     }
 
     private int getVolgendeIndex() {
         AANTAL_PRODUCTEN += 1;
         return AANTAL_PRODUCTEN;
-        }
     }
+}
 
