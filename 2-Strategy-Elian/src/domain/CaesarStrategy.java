@@ -8,10 +8,10 @@ public class CaesarStrategy implements CodingStrategy{
     }
 
     public String codeer(){
-        return "epic";
+        return null;
     }
 
     public String decodeer(){
-        return "epic";
+        return null;
     }
 }
