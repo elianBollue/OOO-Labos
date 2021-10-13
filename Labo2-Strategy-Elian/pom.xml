@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
-    <artifactId>a2-Strategy-Elian</artifactId>
+    <groupId>strategy</groupId>
+    <artifactId>Labo2-Strategy-Elian</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>a2-Strategy-Elian</name>
+    <name>Labo2-Strategy-Elian</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,12 +18,12 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>15.0.1</version>
+            <version>11.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>15.0.1</version>
+            <version>11.0.2</version>
         </dependency>
 
         <dependency>
@@ -47,8 +47,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>15</source>
-                    <target>15</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.a2strategyelian/HelloApplication
+                            <mainClass>strategy.labo2strategyelian/strategy.labo2strategyelian.HelloApplication
                             </mainClass>
                         </configuration>
                     </execution>

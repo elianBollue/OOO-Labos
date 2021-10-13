@@ -1,3 +1,5 @@
+package strategy.labo2strategyelian;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 

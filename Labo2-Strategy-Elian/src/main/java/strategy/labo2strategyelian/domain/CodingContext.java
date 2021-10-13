@@ -1,4 +1,4 @@
-package domain;
+package strategy.labo2strategyelian.domain;
 
 public class CodingContext {
     private String tekst;
