@@ -17,9 +17,9 @@ public class CodingContext {
     }
 
     public String codeer(){
-        return null;
+        throw new IllegalArgumentException("Geen coder beschikbaar");
     }
     public String decodeer() {
-        return null;
+        throw new IllegalArgumentException("Geen decoder beschikbaar");
     }
 }
