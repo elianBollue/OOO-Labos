@@ -1,5 +1,7 @@
-import domain.CodingContext;
-import domain.SpiegelingStrategy;
+package strategy.labo2strategyelian;
+
+import strategy.labo2strategyelian.domain.CodingContext;
+import strategy.labo2strategyelian.domain.SpiegelingStrategy;
 
 public class CodingApp {
     public static void main(String[] args){ //ik snap er de ballen van
