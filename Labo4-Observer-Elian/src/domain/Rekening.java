@@ -1,15 +1,15 @@
 package domain;
 
 public class Rekening {
-    private int nummer;
+    private String nummer;
     private double saldo;
 
-    public Rekening(int nummer, double saldo){
+    public Rekening(String nummer, double saldo){
         setNummer(nummer);
         setSaldo(saldo);
     }
 
-    private void setNummer(int nummer){
+    private void setNummer(String nummer){
         this.nummer = nummer;
     }
 
@@ -17,7 +17,7 @@ public class Rekening {
         this.saldo = saldo;
     }
 
-    public int getNummer(){
+    public String getNummer(){
         return this.nummer;
     }
 }
