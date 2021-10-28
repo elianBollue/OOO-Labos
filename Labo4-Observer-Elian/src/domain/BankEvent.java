@@ -1,7 +1,7 @@
 package domain;
 
 public enum BankEvent {
-    Openen,
-    Storten,
-    Afhalen
+    NEW,
+    DEPOSIT,
+    WITHDRAW
 }

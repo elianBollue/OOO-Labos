@@ -3,14 +3,23 @@ package domain;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class Bank implements Subject{
+public class Bank implements Subject{ //TODO Code aanpassen zodat het werkt zoals voorbeeld
     private HashMap<String,Rekening> rekeningen;
-    private HashMap<BankEvent, List<Observer>> observers;
 
-    public Bank(){
+    private Map<BankEvent, List<BankObserver>> observers = new HashMap<>();
+    private Map<Integer,BankAccount> accounts;
+    private int nextacct;
+
+    public Bank(Map<Integer,BankAccount> accounts, int n){
+        this.accounts = accounts;
+        nextacct = n;
+        for(BankEvent e : BankEvent.values()){
+            observers.put(e, new ArrayList<BankObserver>());
+        }
+
         rekeningen = new HashMap<>();
-        observers = new HashMap<>();
     }
 
     public void voegRekeningToe(String rekeningNummer, double saldo){
@@ -23,7 +32,7 @@ public class Bank implements Subject{
     }
 
     @Override
-    public void addObserver(Observer observer, BankEvent event) {
+    public void addObserver(BankObserver observer, BankEvent event) {
         if (observers.get(event) == null){
             observers.put(event, new ArrayList<>());
         }
@@ -31,12 +40,14 @@ public class Bank implements Subject{
     }
 
     @Override
-    public void removeObserver(Observer observer) {
+    public void removeObserver(BankObserver observer) {
         observers.remove(observer);
     }
 
     @Override
-    public void notifyObserver() {
-
+    public void notifyObserver(BankEvent e, BankAccount ba, int depositamt) {
+        for(BankObserver obs : observers.get(e)){
+            obs.update(e, ba, depositamt);
+        }
     }
 }
