@@ -8,8 +8,15 @@ public class CaesarStrategy implements CodingStrategy{
     private final static char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
     private int offset  = 4;
 
+
+
     public CaesarStrategy(CodingContext codingContext){
         this.codingContext = codingContext;
+    }
+    public CaesarStrategy() {}
+
+    public void setCodingContext(CodingContext context) {
+        this.codingContext=context;
     }
 
     public String codeer(){
@@ -49,6 +56,7 @@ public class CaesarStrategy implements CodingStrategy{
         }
         return string;
     }
+
 
     private boolean inAlphabet(char letter){
         for(char c : alphabet){

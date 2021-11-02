@@ -3,8 +3,14 @@ package strategy.labo2strategyelian.domain;
 public class SpiegelingStrategy implements CodingStrategy {
     private CodingContext codingContext;
 
+    public SpiegelingStrategy() { }
+
     public SpiegelingStrategy(CodingContext codingContext){
         this.codingContext = codingContext;
+    }
+
+    public void setCodingContext(CodingContext context) {
+        this.codingContext=context;
     }
 
     public String codeer() {
